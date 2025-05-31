@@ -1,0 +1,12 @@
+[
+    {
+        "username" : "Srinivasu", 
+        "password" : "abcdefg",
+        "city": "Wake Forest"
+    },
+    {
+        "username" : "Amrutha", 
+        "password" : "abcdefg",
+        "city": "Wake Forest"
+    }
+]
