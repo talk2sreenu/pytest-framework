@@ -1,3 +1,5 @@
+import time
+import pytest
 from pytest_bdd import given, when, then, scenarios, scenario
 
 scenarios("../features/basepage.feature")
@@ -8,9 +10,13 @@ def verify_first_step():
     pass
 
 @when("User performs second step")
-def verify_second_step():
+@pytest.mark.usefixtures("page")
+def verify_second_step(page):
     print("Second step also completed")
-    pass
+    # Launch browser and navigate to Google
+    page.goto("https://www.google.com")
+    time.sleep(5)  # Wait for the page to load
+    assert "Google" in page.title()
 
 @then("Expected Result will display")
 def verify_expected_result():

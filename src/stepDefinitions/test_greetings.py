@@ -1,7 +1,7 @@
 import pytest
 from pytest_bdd import given, when, then, scenarios, parsers
 
-from src.greeter.Greeter import Greeter
+from greeter.Greeter import Greeter
 
 scenarios("../features/greetings.feature")
 
